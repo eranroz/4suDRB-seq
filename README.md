@@ -3,6 +3,8 @@ This is a simple script for calling the Pol II wave frontier in 4su DRB seq.
 * Input files: read coverage in matlab cell array, organized by chromosomes
 * Output: csv file with transcripts and their Pol II wave frontier
 
+Pull requests/[issues](https://github.com/eranroz/4suDRB-seq/issues/new) to support more standard file formats or other requests are welcome.
+
 # Install
 ```
 python setup.py install
@@ -15,8 +17,8 @@ Or manually install [hmm_kit](https://github.com/eranroz/hmm) and clone the repo
 2. Extract the reads to matlab array and save it in format of REPLICATE_CONDITION_TIME.mat
    Do it for all replicates and conditions and store them in same directory
 3. Change config.py:
- 3.1. TRANSCRIPTION_DATA_DIR - Should point to the above directory
- 3.2. jump - Should be compatible to the size of the bins in the matlab array. (the size of the matlab array of chromsome should be compatible to UCSC chrom.sizes/jump
+ 1. TRANSCRIPTION_DATA_DIR - Should point to the above directory
+ 2. jump - Should be compatible to the size of the bins in the matlab array. (the size of the matlab array of chromsome should be compatible to UCSC chrom.sizes/jump
 4. Run the script:
 ```
 python hmm_polwave.py CONDITION EXPERIMENT_TIME --rep_sample REPLICATE --genome hg19
